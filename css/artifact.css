@@ -1,0 +1,192 @@
+body {
+  font-size: calc(0.75em + 1vmin);
+  color: #212529;
+  font-family: 'Nunito', 'Times New Roman', serif;
+}
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: 'Nunito', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #212529;
+  transition: all 0.2s;
+}
+
+a:focus, a:hover {
+  color: rgba(0,0,0,.7);
+}
+
+blockquote {
+  font-style: italic;
+  color: #868e96;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.caption {
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: rgba(0,0,0,.7);
+  text-shadow: none;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0,0,0,.7);
+  text-shadow: none;
+}
+
+img::-moz-selection {
+  color: #fff;
+  background: transparent;
+}
+
+img::selection {
+  color: #fff;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: #fff;
+  background: transparent;
+}
+#mainNav {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 600;
+  color: #343a40;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 13px;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+  }
+  #mainNav .navbar-brand {
+    padding: 10px 20px;
+    color: #212529;
+  }
+  #mainNav .navbar-nav > li.nav-item > a {
+    padding: 10px 20px;
+    color: #212529;
+  }
+  #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+    color: #51565c;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav {
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+.main_block > h1{
+  font-family: 'Nunito', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.content_block > h1{
+  font-family: 'Nunito', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.cards{
+  margin-top: 30px;
+}
+
+.content-body{
+  text-align: center;
+  font-size: 16px
+}
+
+.content-text{
+  margin: 15px 0;
+}
+
+.btn-silver {
+    color: #fff;
+    background-color: #dbdbdb;
+    border-color: #dbdbdb;
+}
+
+.btn-silver:hover {
+    color: #fff;
+    background-color: #bdbdbd;
+    border-color: #bdbdbd;
+}
+.main{
+  padding-bottom: 3rem !important;
+}
+
+footer{
+  font-size: 16px;
+}
+
+.card-text{
+  font-size: 1rem;
+}
+.card{
+  border: none !important;
+}
+.text_title > p{
+  margin-top: 0;
+}
+.block_buy{
+  background-color: #fff;
+}
