@@ -41,6 +41,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Обратная связь</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="covid-19.html"><b>COVID-19</b></a>
+          </li>
         </ul>
       </div>
     </div>
@@ -132,6 +135,8 @@
             </div>
           </div>
           <hr>
+
+
           <div class="col-lg-6 mx-auto">
             <form>
               <div class="form-group">
@@ -140,26 +145,22 @@
               </div>
               <div class="form-group">
                 <label for="inputState">Как с вами связаться?</label>
-                <select id="inputState" class="form-control" >
+                <select id="chooseMessage" class="form-control" >
                   <option disabled selected>Выбрать...</option>
-                  <option>Телефон</option>
-                  <option>Email</option>
+                  <option value="1" >Телефон</option>
+                  <option value="2" >Email</option>
                 </select>
               </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
+              <div class="form-row" id="telephone" style="display:none">
+                <div class="form-group col-md-12">
                   <label for="inputPhone">Телефон</label>
                   <input type="text" class="form-control" id="inputPhone" placeholder="+375">
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="inputemail">E-mail</label>
-                  <input type="text" class="form-control" id="inputemail" placeholder="LeonardoDaVinchi@geniy.com">
-                </div>
               </div>
-              <div class="form-row">
+              <div class="form-row" id="telephoneMessage" style="display:none">
                 <div class="form-group col-lg-6">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="callCheck">
+                    <input class="form-check-input" type="radio" id="callCheck" name="checktelephone" checked>
                     <label class="form-check-label" for="callCheck">
                       Связаться по Телефону 
                     </label>
@@ -167,7 +168,7 @@
                 </div>
                 <div class="form-group col-lg-6">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="telegramCheck">
+                    <input class="form-check-input" type="radio" id="telegramCheck" name="checktelephone">
                     <label class="form-check-label" for="telegramCheck">
                       Связаться по Telegram
                     </label>
@@ -175,7 +176,7 @@
                 </div>
                 <div class="form-group col-lg-6">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="ViberCheck">
+                    <input class="form-check-input" type="radio" id="ViberCheck" name="checktelephone">
                     <label class="form-check-label" for="ViberCheck">
                       Связаться по Viber
                     </label>
@@ -183,18 +184,26 @@
                 </div>
                 <div class="form-group col-lg-6">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="WhatsappCheck">
+                    <input class="form-check-input" type="radio" id="WhatsappCheck" name="checktelephone">
                     <label class="form-check-label" for="WhatsappCheck">
                       Связаться по WhatsApp
                     </label>
                   </div>
                 </div>
               </div>
+
+              <div class="form-row" id="email" style="display: none;">
+                <div class="form-group col-md-12">
+                  <label for="inputemail">E-mail</label>
+                  <input type="text" class="form-control" id="inputemail" placeholder="LeonardoDaVinchi@geniy.com">
+                </div>
+              </div>
+
               <div class="form-group">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                  <label class="custom-file-label"  for="validatedCustomFile">Добавитьте фотографии</label>
-                  <div class="invalid-feedback">Вы не добавили фотографии</div>
+                <label>Добавитьте фотографии</label>
+                <div class="file">
+                  <input type="file" class="file_input" accept=".jpg, .png, .gif" checked>
+                  <div class="file_button">Выбрать</div>
                 </div>
               </div>
 
@@ -230,5 +239,25 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="vendor/jquery/jquery-3.5.1.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $("#chooseMessage").on('change', function(){
+    if($(this).val() == 1){
+        $("#email").hide();
+        $("#telephone").show();
+        $("#telephoneMessage").show();
+    } else{
+        $("#telephone").hide();
+        $("#telephoneMessage").hide();
+        $("#email").show();
+    }
+})
+    $(function () {
+  $('.sev_check').click(function(e) {
+    $('.sev_check').not(this).prop('checked', false);
+  });
+});
+  </script>
 </body>
 </html>

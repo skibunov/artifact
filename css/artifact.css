@@ -190,3 +190,28 @@ footer{
 .block_buy{
   background-color: #fff;
 }
+.form-check-label{
+  font-size: 20px;
+}
+.file{
+  position: relative;
+}
+.file_input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+.file_button{
+  display: inline-block;
+  min-height: 40px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding-top: 0 20px;
+}
